@@ -1,0 +1,29 @@
+[project]
+name = "trainbench"
+version = "0.1.0"
+description = "A local-first ML training and experiment management platform"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+dependencies = [
+    "fastapi>=0.163",
+    "uvicorn[standard]>=0.54",
+    "pydantic>=2.14",
+    "pydantic-settings>=2.16",
+    "SQLAlchemy>=2.1",
+    "aiosqlite>=0.22",
+    "greenlet>=3.5",
+    "numpy>=2.5",
+    "torch>=2.15",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.2",
+    "pytest-asyncio>=1.5",
+    "httpx>=0.28",
+]
+
+[tool.pyrefly.errors]
+missing-import = false
