@@ -1,6 +1,6 @@
 # TrainBench
 
-**A local-first ML training and experiment management platform** for researchers and engineers who need reproducible benchmark runs with full provenance tracking — without cloud lock-in.
+**A local-first ML training and experiment management platform** for researchers and engineers who need reproducible benchmark runs with full provenance tracking - without cloud lock-in.
 
 TrainBench lets you configure training jobs through a guided 4-step wizard, execute them deterministically, track every metric, compare runs side by side, and reproduce any experiment in a single click. Everything persists in a local SQLite database you own.
 
@@ -40,17 +40,17 @@ TrainBench lets you configure training jobs through a guided 4-step wizard, exec
 
 ## Key Features
 
-- **4-step run wizard** — configure framework, task, dataset (synthetic or local CSV/JSON upload), model architecture, and hyperparameters through a validated form before submitting
-- **Local dataset upload & schema mapping** — upload CSV or JSON datasets, validate row counts and column types, select prediction target, and train models on your own data
-- **Deterministic training** — fixed random seeds, full configuration capture; the same seed + config produces the same result every time
-- **SHA-256 provenance fingerprinting** — config hash, dataset hash, and dependency snapshot recorded at run creation time; fingerprints are immutable after the run starts
-- **Live metric charts** — loss, accuracy (classification), and R² (regression) plotted per epoch via Recharts; no page refresh required
-- **Run comparison** — select two or more completed runs for a side-by-side table of metric deltas and hyperparameter diffs; cross-task comparisons are blocked with a clear error
-- **One-click reproduction** — clone any run; the new run is linked to the original via `parent_run_id`
-- **Run cancellation** — cancel queued or running jobs; in-flight training checks the cancellation flag between epochs
-- **Checkpoint artifacts** — model weights saved at checkpoints with SHA-256 checksum verification; downloadable via the API
-- **Diagnostics view** — environment info, database health, adapter registry, and dependency versions surfaced in the UI
-- **Zero-config default** — uses a local SQLite database out of the box, no server required
+- **4-step run wizard** - configure framework, task, dataset (synthetic or local CSV/JSON upload), model architecture, and hyperparameters through a validated form before submitting
+- **Local dataset upload & schema mapping** - upload CSV or JSON datasets, validate row counts and column types, select prediction target, and train models on your own data
+- **Deterministic training** - fixed random seeds, full configuration capture; the same seed + config produces the same result every time
+- **SHA-256 provenance fingerprinting** - config hash, dataset hash, and dependency snapshot recorded at run creation time; fingerprints are immutable after the run starts
+- **Live metric charts** - loss, accuracy (classification), and R² (regression) plotted per epoch via Recharts; no page refresh required
+- **Run comparison** - select two or more completed runs for a side-by-side table of metric deltas and hyperparameter diffs; cross-task comparisons are blocked with a clear error
+- **One-click reproduction** - clone any run; the new run is linked to the original via `parent_run_id`
+- **Run cancellation** - cancel queued or running jobs; in-flight training checks the cancellation flag between epochs
+- **Checkpoint artifacts** - model weights saved at checkpoints with SHA-256 checksum verification; downloadable via the API
+- **Diagnostics view** - environment info, database health, adapter registry, and dependency versions surfaced in the UI
+- **Zero-config default** - uses a local SQLite database out of the box, no server required
 
 ---
 
@@ -68,7 +68,7 @@ TrainBench lets you configure training jobs through a guided 4-step wizard, exec
 
 ## Architecture
 
-TrainBench is built in layered fashion — each layer has a single direction of dependency:
+TrainBench is built in layered fashion - each layer has a single direction of dependency:
 
 ```
 frontend/              React SPA (Vite build, served by FastAPI)
@@ -172,7 +172,7 @@ The interactive API documentation (Swagger UI) is at **http://127.0.0.1:8000/doc
 
 ## Configuration
 
-All settings can be overridden via environment variables (prefix: `TRAINBENCH_`) or a `.env` file in the project root — see `.env.example` for the full list. A `.env` inside `backend/` is also loaded as a fallback; the project-root file takes precedence.
+All settings can be overridden via environment variables (prefix: `TRAINBENCH_`) or a `.env` file in the project root - see `.env.example` for the full list. A `.env` inside `backend/` is also loaded as a fallback; the project-root file takes precedence.
 
 | Variable | Default | Description |
 |---|---|---|
@@ -312,4 +312,4 @@ Both are created automatically; the `data/` directory should be added to `.gitig
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
